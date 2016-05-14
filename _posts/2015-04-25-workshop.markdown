@@ -1,20 +1,51 @@
 ---
-title:  "A Craftsman Workshop"
-subtitle: "It's always a bit messy"
-author: "Wferr"
+title:  "Foco controlado desde un móvil(ESP8266 - EasyIoT Nube API MQTT)"
+subtitle: "Interruptor conectado a internet - ESP8266"
+author: "Cristhian Pérez Góngora y Jesús Pérez Góngora"
 avatar: "img/authors/wferr.png"
-image: "img/f.jpg"
-date:   2015-04-25 12:12:12
+image:  "img/f.jpg"
+date:   2016-05-13 12:12:12
 ---
 
-### Dolor sit amet?
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum non mi non pulvinar. Donec tempus risus vel ex fringilla tempor. Vivamus pharetra non mauris quis fermentum. Vestibulum sed maximus elit, sit amet suscipit orci. Morbi at enim at libero dignissim egestas vel ac nisi. Etiam at lectus a arcu sodales consequat. Aliquam consequat ligula sed purus tincidunt, a ultrices nibh dapibus. Phasellus convallis ipsum nec semper ultricies. In facilisis lacus velit, sit amet lacinia velit blandit id. Nullam ut magna erat. Aliquam sit amet dapibus odio, aliquet tempus tortor. Donec in nisi massa.
+# Controla un foco de tu hogar desde tu celular sin importar el lugar en el que te encuentres.
 
-### Aliquam suscipit.
-Cras eget nisl accumsan, porta nisl in, egestas sapien. Vestibulum gravida nulla sed facilisis tempor. Suspendisse maximus nisi sit amet velit sodales fringilla. Vivamus luctus risus eget dui consectetur porttitor. Maecenas ut ultrices orci. Maecenas mollis est eu sodales mollis. Nulla facilisi. Suspendisse eros arcu, elementum sed sem eu, pharetra rhoncus odio. Proin nec tincidunt velit. Cras nisl augue, faucibus sed mauris in, vestibulum mollis nisl. Nam id libero ultrices, consequat ex vitae, convallis nulla.
+### Introducción
+El presente proyecto se basa en IoT, Internet de las cosas (en inglés, Internet of things, abreviado IoT) es un concepto que se refiere a la interconexión digital de objetos cotidianos con internet. IoT es esencialmente un sistema de máquinas u objetos equipados con tecnologías de recopilación de datos, de manera que esos objetos pueden comunicarse entre sí. Los datos de máquina a máquina (M2M) que se generan tienen una amplia gama de usos, pero comúnmente se ven como una forma de determinar la salud y el estado de las cosas, inanimadas o con vida.
 
-Suspendisse lorem odio, blandit at nisl quis, hendrerit tempus tellus. Donec eget leo quis nisi vulputate consectetur. Praesent dignissim enim elit, congue luctus nisl cursus at. Sed rutrum molestie risus. Donec vulputate gravida accumsan. Vivamus tempus ullamcorper eleifend. Sed sagittis mi ut dolor tincidunt, ac rutrum nisi commodo.
+Una aplicación clara es la domótica, la domótica es conjunto de técnicas orientadas a automatizar una vivienda, que integran la tecnología en los sistemas de seguridad, gestión energética, bienestar, comunicaciones, etc. 
 
-Fusce non elit in diam rutrum vestibulum. Donec vitae elementum erat. Praesent elementum eget justo at bibendum. Fusce interdum diam lorem, ut placerat elit pretium quis. Quisque eu urna at quam commodo sagittis. Etiam posuere convallis tincidunt. Phasellus vitae ligula neque. Vivamus a purus at dolor iaculis placerat. Curabitur convallis eu lacus congue sagittis.
 
-Aliquam suscipit fermentum mauris a accumsan. In facilisis, mauris quis pulvinar tempus, turpis sapien sodales nibh, nec feugiat augue est quis nisi. Fusce eget odio feugiat, luctus quam et, dapibus nulla. Sed ornare lacus non libero lacinia pretium. In eu dui vitae purus euismod feugiat ac ac est. Morbi vitae pretium lorem, non eleifend felis. Nullam at massa feugiat, rutrum elit at, semper lacus. Etiam vel rutrum felis. Nullam quis auctor lorem, et tempor arcu.
+### Resumen
+El proyecto consiste en controlar un foco instalado en el hogar desde un dispositivo móvil, este dispositivo debe contar con acceso a internet y tener instalado la aplicación EasyIoT Cloud. El foco podrá ser controlado desde cualquier parte sin importar el lugar en que nos encontremos, no hay que olvidar que el  dispositivo deberá tener acceso a internet para poder encender o apagar el foco. 
+
+Se usó un módulo WIFI ESP8266 (NodeMCU V2 Módulo IOT ESP8266) para conectarnos a internet y así poder monitorear los sensores configurados en una cuenta (EasyIoT Cloud) esta placa tiene un procesador ARM Cortex M4 de 32 bits, 256 K de memoria Flash, 64k de RAM y 2k de EEPROM lo que la hace potente en comparación a otras. También se usó la aplicación móvil desarrollada por EasyIoT Cloud para conectarnos al servidor.
+
+### Descripcion del proyecto
+El proyecto consiste en controlar un foco instalado en el hogar desde un dispositivo móvil, este dispositivo debe contar con acceso a internet y tener instalado la aplicación EasyIoT Cloud. El foco podrá ser controlado desde cualquier parte sin importar el lugar en que nos encontremos, no hay que olvidar que el  dispositivo deberá tener acceso a internet para poder encender o apagar el foco. 
+
+Se usó un módulo WIFI ESP8266 (NodeMCU V2 Módulo IOT ESP8266) para conectarnos a internet y así poder monitorear los sensores configurados en una cuenta (EasyIoT Cloud) esta placa tiene un procesador ARM Cortex M4 de 32 bits, 256 K de memoria Flash, 64k de RAM y 2k de EEPROM lo que la hace potente en comparación a otras. También se usó la aplicación móvil desarrollada por EasyIoT Cloud para conectarnos al servidor.
+
+
+Los dispositivos que se utilizaron para el desarrollo del proyecto  - 
+  - 1 Protoboard
+  - 1 Relevador de 5V
+  - 1 Resistencia 1K
+  - 1 Resistencia 47K
+  - 1 Módulo WIFI ESP8266 Lua Nodemcu
+  - 1 Transistor NPN 2N2222 TO-92
+  - 1 Foco
+  - 1 Socket para foco
+
+
+### Funcionamiento
+<iframe width="560" height="315" src="https://youtu.be/1gAzKeoH4fI" frameborder="0" allowfullscreen></iframe>
+
+#### Referencias:
+
+[SearchDataCenter en Español. (2016). Explicación: ¿Qué es la internet de las cosas?, online, Available at: http://searchdatacenter.techtarget.com/es/cronica/Explicacion-Que-es-la-internet-de-las-cosas, Accessed 01 May 2016.]
+[Anon, (2016). http://cloud.iot-playground.com/]
+[User, S. (2016). ESP8266 internet connected switch (EasyIoT Cloud MQTT API). (online) Iot-playground.com. Available at: http://iot-playground.com/blog/2-uncategorised/77-esp8266-internet-controlled-switch-easyiot-cloud-mqtt-api (Accessed 13 May 2016).]
+
+#### Equipo:
+    [Cristhian Jesús Pérez Góngora]
+    [Jesús Enrique Pérez Góngora]
